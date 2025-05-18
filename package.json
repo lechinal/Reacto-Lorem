@@ -1,6 +1,6 @@
 {
   "name": "reacto-lorem",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://lechinal.github.io/Reacto-Lorem/",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "node node_modules/gh-pages/bin/gh-pages-clean.js && gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
