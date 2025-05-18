@@ -1,0 +1,41 @@
+.contactPage {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+}
+
+.contactLayout {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments PENTRU LAYOUT-UL GENERAL */
+@media (max-width: 992px) {
+  .contactLayout {
+    flex-direction: column;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+}

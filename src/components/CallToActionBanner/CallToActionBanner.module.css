@@ -1,0 +1,60 @@
+.ctaBanner {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: var(--primary-color, #007bff);
+  color: var(--text-color-on-primary, white);
+  border-radius: var(--border-radius-lg, 8px);
+  margin: 2rem 0;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.ctaSubtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: var(--color-white, white);
+  color: var(--primary-color, #007bff);
+  padding: 0.9rem 2rem;
+  border-radius: var(--border-radius, 4px);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s ease-out, background-color 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  background-color: var(--color-gray-100, #f8f9fa);
+}
+
+@media (max-width: 768px) {
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+  .ctaSubtitle {
+    font-size: 1rem;
+  }
+  .ctaButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

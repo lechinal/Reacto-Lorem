@@ -1,0 +1,29 @@
+.faqPage {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  animation: fadeIn 0.5s ease-in-out; /* Presupunând că ai fadeIn definit global */
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--text-color-headings, #343a40);
+  margin-bottom: 2.5rem;
+}
+
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments pentru pagina FAQ în ansamblu */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .faqPage {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+}

@@ -1,0 +1,65 @@
+/* NotFound.module.css */
+.notFoundPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  min-height: 60vh; /* Asigura ca ocupa spatiu chiar si pe ecrane mici */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.notFoundImage {
+  max-width: 300px;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+}
+
+.errorCode {
+  font-size: 6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0;
+  line-height: 1;
+}
+
+.errorMessage {
+  font-size: 2rem;
+  color: var(--dark-color);
+  margin: 0.5rem 0 1rem 0;
+}
+
+.errorDescription {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.homeButton {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.homeButton:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

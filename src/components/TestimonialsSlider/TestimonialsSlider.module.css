@@ -1,0 +1,161 @@
+.testimonialsSection {
+  padding: 3rem 1.5rem;
+  background-color: var(--bg-color-alt, #f8f9fa); /* Un fundal ușor diferit */
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: var(--text-color-headings, #343a40);
+  margin-bottom: 2.5rem;
+}
+
+.sliderContainer {
+  position: relative;
+  max-width: 750px; /* Lățime maximă pentru testimonial */
+  margin: 0 auto;
+  padding: 0 3rem; /* Spațiu pentru butoanele de navigare */
+  min-height: 280px; /* Înălțime minimă pentru a evita salturile de layout */
+  display: flex; /* Pentru a centra testimonialul dacă nu sunt butoane */
+  align-items: center;
+}
+
+.testimonialCard {
+  background-color: var(--color-white, white);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg, 8px);
+  box-shadow: var(--box-shadow, 0 4px 15px rgba(0, 0, 0, 0.1));
+  width: 100%;
+  /* Animație de tranziție (opțional, necesită mai mult CSS pentru efecte fade) */
+  /* transition: opacity 0.5s ease-in-out; */
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  border: 3px solid var(--primary-color, #007bff);
+}
+
+.quote {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--text-color-default, #343a40);
+  margin-bottom: 1rem;
+  quotes: "“" "”" "‘" "’";
+}
+
+.quote::before {
+  content: open-quote;
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.1em;
+  /* color: var(--primary-color, #007bff); */
+  color: #fc9e4f;
+}
+.quote::after {
+  content: close-quote;
+  font-size: 3em; /* Aceeași mărime ca ::before */
+  line-height: 0.1em;
+  margin-left: 0.1em; /* margin-left pentru ::after */
+  vertical-align: -0.3em;
+  /* color: var(--primary-color, #007bff); */
+  color: #fc9e4f;
+}
+
+.author {
+  font-weight: bold;
+  color: var(--text-color-headings, #343a40);
+  display: block; /* Pentru a permite span-ului să stea corect */
+}
+
+.role {
+  display: block; /* Sau inline-block */
+  font-size: 0.9rem;
+  font-style: normal;
+  color: var(--text-color-muted, #6c757d);
+  margin-top: 0.25rem;
+}
+
+.sliderButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem; /* Pentru caracterele < > */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+.sliderButton:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.prevButton {
+  left: 0px;
+}
+
+.nextButton {
+  right: 0px;
+}
+
+.dotsContainer {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.activeDot {
+  background-color: var(--primary-color, #007bff);
+}
+
+@media (max-width: 768px) {
+  .sliderContainer {
+    padding: 0 2.5rem; /* Mai puțin spațiu pentru butoane pe mobil */
+  }
+  .quote {
+    font-size: 1rem;
+  }
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderButton {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+  .prevButton {
+    left: -5px;
+  }
+  .nextButton {
+    right: -5px;
+  }
+}

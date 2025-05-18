@@ -1,0 +1,82 @@
+.githubBadge {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--github-badge-bg);
+  color: var(--github-badge-text-color);
+  padding: var(--github-badge-padding);
+  border-radius: var(--github-badge-border-radius);
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: var(--github-badge-font-size);
+  font-weight: 500;
+  line-height: 1.5;
+  transition: background-color var(--github-badge-transition-speed) ease,
+    transform var(--github-badge-transition-speed) ease;
+  gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.githubBadge:hover,
+.githubBadge:focus {
+  background-color: var(--github-badge-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.icon {
+  flex-shrink: 0;
+  font-size: 1.2em;
+  color: var(--github-badge-icon-color);
+  transition: transform var(--github-badge-transition-speed) ease;
+}
+
+.githubBadge:hover .icon {
+  transform: rotate(-15deg) scale(1.1);
+}
+
+.textContainer {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.initialText,
+.hoverText {
+  display: inline-block;
+  transition: opacity var(--github-badge-transition-speed) ease-in-out,
+    transform var(--github-badge-transition-speed) ease-in-out;
+}
+
+.initialText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hoverText {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+.githubBadge:hover .initialText {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.githubBadge:hover .hoverText {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.username {
+  font-weight: 600;
+  color: var(--github-badge-username-color);
+}

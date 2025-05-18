@@ -1,0 +1,154 @@
+.footer {
+  background-color: var(
+    --color-dark,
+    #343a40
+  ); /* O culoare închisă pentru footer */
+  color: var(--text-color-on-dark, #f8f9fa); /* Text deschis pe fundal închis */
+  padding: 3rem 0 1.5rem 0; /* Spațiere sus/jos */
+  margin-top: auto; /* Important pentru sticky footer, dacă #root are display:flex și min-height:100vh */
+}
+
+.footerContainer {
+  /* Clasa container globală ar trebui să gestioneze lățimea și centrarea */
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap; /* Permite trecerea pe rânduri noi pe ecrane mici */
+  justify-content: space-between;
+  gap: 2rem; /* Spațiu între secțiuni */
+  margin-bottom: 2rem;
+}
+
+.footerSection {
+  flex: 1; /* Distribuie spațiul */
+  min-width: 200px; /* Lățime minimă înainte de a trece pe rândul următor */
+}
+
+.footerTitle {
+  /* Titlul principal din footer (numele site-ului) */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  color: var(--color-white, #ffffff);
+}
+
+.footerSubtitle {
+  /* Titlurile secțiunilor (Linkuri Utile, Conectează-te) */
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-gray-200, #e9ecef); /* O culoare puțin mai subtilă */
+  border-bottom: 1px solid var(--color-gray-600, #6c757d);
+  padding-bottom: 0.5rem;
+}
+
+.footerText {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 0.5rem;
+}
+
+.footerLinks a {
+  color: var(--text-color-on-dark, #f8f9fa);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.footerLinks a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  color: var(--text-color-on-dark, #f8f9fa);
+  font-size: 1.5rem;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: color 0.2s ease, opacity 0.2s ease;
+
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+/* .socialLink:hover {
+  opacity: 1;
+  transform: scale(1.1);
+} */
+
+/* Culorile specifice la hover */
+
+.socialLink.facebook:hover {
+  color: #1877f2;
+  transform: scale(1.1);
+}
+
+.socialLink.x:hover {
+  color: #1da1f2;
+  transform: scale(1.1);
+}
+
+.socialLink.instagram:hover {
+  color: #c13584;
+}
+
+.socialLink.linkedin:hover {
+  color: #0a66c2; /* LinkedIn Blue */
+  /* Poți încerca și: color: #0077B5; */
+}
+
+.socialLink.youtube:hover {
+  color: #ff0000; /* YouTube Red */
+}
+
+.footerBottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-gray-600, #6c757d); /* Linie de separare */
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.creatorBadgeContainer {
+  margin-top: 0.5rem;
+  text-align: center;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; */
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column; /* Stivuiește secțiunile pe mobil */
+    align-items: center; /* Centrează conținutul când e stivuit */
+    text-align: center;
+  }
+  .footerSection {
+    min-width: auto; /* Permite lățime completă când e stivuit */
+    margin-bottom: 1.5rem;
+  }
+  .socialIcons {
+    justify-content: center; /* Centrează iconițele sociale */
+  }
+  .footerSubtitle {
+    text-align: center;
+  }
+}

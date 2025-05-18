@@ -1,0 +1,168 @@
+/* App.module.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: var(--card-background);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbarContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Necesar pentru poziționarea absolută a meniului mobil */
+}
+
+.titleLink {
+  /* Stil pentru link-ul titlului */
+  text-decoration: none;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Butonul Hamburger */
+.hamburgerButton {
+  display: none; /* Ascuns pe desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem; /* Spațiu pentru click */
+  z-index: 1005; /* Deasupra listei de navigație când e absolută */
+  flex-direction: column; /* Necesare pentru alinierea span-urilor */
+  justify-content: space-around;
+  width: 35px; /* Lățime fixă */
+  height: 30px; /* Înălțime fixă */
+}
+
+.hamburgerButton .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--dark-color);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animație Hamburger -> X */
+.hamburgerButton.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg); /* 8px = (5px margin + 3px height)/2 approx */
+}
+.hamburgerButton.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburgerButton.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Lista de Navigație - stiluri de bază (desktop) */
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navList li {
+  margin-left: 25px;
+}
+
+.navLink {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Adăugat border-color */
+  border-bottom: 2px solid transparent; /* Spațiu pentru border activ */
+}
+
+.navLink:hover,
+.navLinkActive {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color); /* Folosim border-color */
+}
+
+.main {
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
+/* Media Query pentru ecrane mici (mobil) */
+@media (max-width: 768px) {
+  .hamburgerButton {
+    display: flex; /* Afișează butonul hamburger */
+  }
+
+  .navList {
+    /* Stiluri pentru meniul dropdown când este ascuns */
+    display: none; /* Inițial ascuns */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Coboară sub navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--card-background);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Umbră mai pronunțată pentru dropdown */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-top: 1px solid #eee;
+
+    /* Tranziție pentru apariție/dispariție */
+    opacity: 0;
+    transform: translateY(-10px); /* Începe puțin mai sus */
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    pointer-events: none;
+  }
+
+  .navList.mobileMenuOpen {
+    display: flex; /* Afișează meniul când e deschis */
+    opacity: 1;
+    transform: translateY(0); /* Poziția finală */
+    pointer-events: auto;
+  }
+
+  .navList li {
+    margin-left: 0; /* Resetează marginul pentru elementele listei */
+    width: 100%;
+  }
+
+  .navLink {
+    display: block; /* Face linkurile să ocupe toată lățimea */
+    padding: 1rem 20px; /* Padding mai generos pe mobil, aliniază cu container padding */
+    text-align: center;
+    border-bottom: none; /* Elimină border-ul de jos specific desktopului */
+  }
+
+  .navLink:hover,
+  .navLinkActive {
+    color: var(--primary-color);
+    background-color: rgba(
+      0,
+      123,
+      255,
+      0.05
+    ); /* Fundal subtil pentru hover/activ */
+    border-bottom: none; /* Asigură că nu apare border-ul desktop */
+  }
+
+  /* Asigură că link-ul activ are stilurile mobile corecte */
+  .navLink.navLinkActive {
+    font-weight: bold;
+  }
+}

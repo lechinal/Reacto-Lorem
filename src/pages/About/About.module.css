@@ -1,0 +1,42 @@
+.aboutPage {
+  animation: fadeIn 0.5s ease-in-out;
+  /* Adaugă orice alt padding sau margin specific paginii aici, dacă e necesar */
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--dark-color); /* Asigură-te că ai definit --dark-color */
+  margin-bottom: 2rem;
+}
+
+/*
+  Clasa .sectionTitle a fost folosită și în TeamSection.
+  Dacă vrei să fie un stil reutilizabil la nivel de pagină About, o poți lăsa aici.
+  Alternativ, fiecare secțiune își definește propriul titlu sau o componentă Title este creată.
+  Pentru simplitate, o las aici deocamdată, dar TeamSection.module.css are și el o copie.
+  Ideal ar fi să existe o singură sursă de adevăr (fie o componentă Title, fie un stil global).
+*/
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+}

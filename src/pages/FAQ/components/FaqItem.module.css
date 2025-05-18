@@ -1,0 +1,102 @@
+.faqItem {
+  border-bottom: 1px solid var(--border-color-light, #e9ecef);
+  margin-bottom: 1rem;
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.faqQuestion {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 1rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color-default, #343a40);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.faqQuestion:hover,
+.faqQuestion:focus {
+  color: var(--primary-color, #007bff);
+  outline: none;
+}
+
+.faqIcon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.2s ease;
+  margin-left: 0.5rem;
+}
+
+.faqQuestion:hover .faqIcon:not(.isOpen),
+.faqQuestion:focus .faqIcon:not(.isOpen) {
+  transform: scale(1.6);
+}
+
+/* .faqIcon:hover {
+  transform: scale(1.6);
+} */
+.faqIcon.isOpen {
+  transform: rotate(45deg);
+  /* Pentru '+' transformat în 'x' */
+  color: red;
+}
+.faqIcon.isOpen:hover {
+  transform: rotate(-35deg);
+}
+
+.faqAnswerWrapper {
+  overflow: hidden; /* Necesar pentru animația cu max-height */
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  max-height: 0;
+  opacity: 0;
+}
+
+.faqAnswerWrapper.open {
+  max-height: 500px; /* O valoare suficient de mare pentru a cuprinde conținutul */
+  opacity: 1;
+}
+
+.faqAnswerContent {
+  /* Stilurile pentru paragraful propriu-zis */
+  padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+  color: var(--text-color-muted, #6c757d);
+  line-height: 1.7;
+}
+
+.faqAnswerContent p {
+  /* Dacă mai ai <p> în interiorul .faqAnswerContent */
+  margin: 0;
+}
+
+/* Animație pentru răspuns (opțional) */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 500px; /* O valoare suficient de mare */
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2rem;
+  }
+  .faqQuestion {
+    font-size: 1rem;
+  }
+}

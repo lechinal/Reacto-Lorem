@@ -1,0 +1,28 @@
+/* src/pages/About/components/TeamMemberCard.module.css */
+
+.teamMemberCard {
+  background-color: var(--card-background);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.memberImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem auto;
+  border: 3px solid var(--primary-color);
+}
+
+.memberName {
+  margin-bottom: 0.3rem;
+  color: var(--dark-color);
+}
+
+.memberRole {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}

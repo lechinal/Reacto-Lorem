@@ -1,0 +1,65 @@
+.contactInfoSection {
+  flex: 1; /* Din layout-ul paginii Contact */
+  /* Alte stiluri specifice pentru containerul ContactInfo, dacă e necesar */
+}
+
+.sectionTitle {
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem; /* Poți ajusta dimensiunea titlului specific secțiunii */
+}
+
+.infoText {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: 0.95rem; /* Poți ajusta */
+}
+
+.infoText strong {
+  font-weight: 600; /* Sau var(--font-weight-bold) */
+}
+
+.mapOuterContainer {
+  /* Container pentru a gestiona spațierea și aspectul hărții */
+  margin-top: 1.5rem;
+  border-radius: var(
+    --border-radius
+  ); /* Aplică border-radius pe containerul exterior */
+  overflow: hidden; /* Important pentru ca border-radius să afecteze harta din interior */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* O umbră subtilă pentru hartă */
+}
+
+.leafletMap {
+  /* Această clasă va defini dimensiunile hărții */
+  height: 300px; /* Setează înălțimea dorită pentru hartă */
+  width: 100%;
+  /* Nu este nevoie de border-radius aici dacă .mapOuterContainer are overflow: hidden */
+}
+
+/* Responsive: gestionează padding-ul și bordura la schimbarea layout-ului */
+@media (min-width: 992.02px) {
+  /* Când nu este stacked (coloane) */
+  .contactInfoSection {
+    padding-left: 2rem;
+    border-left: 1px solid var(--border-color-default, #e0e0e0); /* Folosește variabila dacă e definită */
+  }
+}
+
+@media (max-width: 992px) {
+  /* Când este stacked (coloană unică) */
+  .contactInfoSection {
+    /* Poate vrei o bordură sus când e stacked, dacă .contactLayout nu o oferă */
+    /* padding-left: 0; */ /* Resetare padding dacă e necesar */
+    /* border-left: none; */ /* Resetare bordură dacă e necesar */
+    /* margin-top: 2rem; */ /* Gestionat de .contactLayout din Contact.module.css */
+    /* padding-top: 2rem; */ /* Gestionat de .contactLayout din Contact.module.css */
+    /* border-top: 1px solid var(--border-color-default, #e0e0e0); */ /* Gestionat de .contactLayout din Contact.module.css */
+  }
+  .mapOuterContainer {
+    margin-top: 2rem; /* Spațiu mai mare pe mobil deasupra hărții */
+  }
+  .leafletMap {
+    height: 250px; /* Poate o înălțime puțin mai mică pe mobil */
+  }
+}
