@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://lechinal.github.io/Reacto-Lorem",
+  "homepage": "https://lechinal.github.io/Reacto-Lorem/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "node node_modules/gh-pages/bin/gh-pages-clean.js && gh-pages -d dist"
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
