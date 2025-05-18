@@ -115,7 +115,7 @@ function App() {
                 }
                 onClick={closeMobileMenu}
               >
-                Legal Legal
+                Legal
               </NavLink>
             </li>
             <li>
