@@ -86,22 +86,15 @@
   margin: 0 0.5rem;
 }
 
-/* .socialLink:hover {
-  opacity: 1;
-  transform: scale(1.1);
-} */
-
 /* Culorile specifice la hover */
 
 .socialLink.facebook:hover {
   color: #1877f2;
   transform: scale(1.1);
-  transform: scale(1.1);
 }
 
 .socialLink.x:hover {
   color: #1da1f2;
-  transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -122,7 +115,7 @@
 }
 
 .socialLink.tiktok:hover {
-  color: #fe2c55; /* Culoarea recomandată pentru TikTok */
+  color: #fe2c55;
   transform: scale(1.1);
 }
 .footerBottom {
