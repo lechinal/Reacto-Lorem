@@ -13,7 +13,6 @@ const Legal = lazy(() => import("./pages/Legal/Legal.jsx"));
 
 const router = createBrowserRouter(
   [
-    // Primul argument: array-ul de rute (rămâne neschimbat)
     {
       path: "/",
       element: <App />,
