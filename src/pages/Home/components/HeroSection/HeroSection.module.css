@@ -15,7 +15,7 @@
 }
 
 .heroImage {
-  flex-basis: 40%; /* Adjust as needed */
+  flex-basis: 40%;
   max-width: 40%;
   border-radius: var(--border-radius);
   object-fit: cover;
@@ -45,7 +45,7 @@
 }
 
 .ctaButton:hover {
-  background-color: #0056b3; /* Darker shade of primary */
+  background-color: #0056b3;
   text-decoration: none;
 }
 /* Responsive adjustments for hero section */

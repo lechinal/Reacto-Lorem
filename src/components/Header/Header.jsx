@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import styles from "./Header.module.css"; // Importă noile stiluri
+
+import Logo from "../Logo/Logo.jsx";
+
+import styles from "./Header.module.css";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -38,7 +41,8 @@ function Header() {
           className={styles.titleLink}
           onClick={closeMobileMenu} // Asigură-te că închide meniul și la click pe titlu
         >
-          <h1 className={styles.title}>Reacto Lorem</h1>
+          <Logo className={styles.logoSvg} aria-label="Reacto Lorem Logo" />
+          {/* <h1 className={styles.title}>Reacto Lorem</h1> */}
         </NavLink>
 
         <button

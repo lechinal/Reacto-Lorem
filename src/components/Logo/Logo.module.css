@@ -1,0 +1,20 @@
+.logoDefault {
+  display: block;
+  width: 250px;
+  height: auto;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Responsive adjustments for Logo  */
+
+@media (max-width: 768px) {
+  .logoDefault {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoDefault {
+    width: 150px;
+  }
+}
