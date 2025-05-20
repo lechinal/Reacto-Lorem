@@ -11,6 +11,7 @@ import { FaYoutube } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
 
 import GitHubBadge from "../GitHubBadge/GitHubBadge";
+import Logo from "../Logo/Logo";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,8 +20,11 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.footerContent}>
-          <div className={styles.footerSection}>
-            <h4 className={styles.footerTitle}>Test de Joaca</h4>
+          <div
+            className={`${styles.footerSection} ${styles.footerSectionLogo}`}
+          >
+            {/* <h4 className={styles.footerTitle}>Reacto Lorem</h4> */}
+            <Logo />
             <p className={styles.footerText}>
               Un proiect demonstrativ pentru a explora diverse funcționalități
               React și design web.

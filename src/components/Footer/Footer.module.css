@@ -1,9 +1,6 @@
 .footer {
-  background-color: var(
-    --color-dark,
-    #343a40
-  ); /* O culoare închisă pentru footer */
-  color: var(--text-color-on-dark, #f8f9fa); /* Text deschis pe fundal închis */
+  background-color: var(--color-dark, #343a40);
+  color: var(--text-color-on-dark, #f8f9fa);
   padding: 3rem 0 1.5rem 0; /* Spațiere sus/jos */
   margin-top: auto; /* Important pentru sticky footer, dacă #root are display:flex și min-height:100vh */
 }
@@ -14,19 +11,22 @@
 
 .footerContent {
   display: flex;
-  flex-wrap: wrap; /* Permite trecerea pe rânduri noi pe ecrane mici */
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 2rem; /* Spațiu între secțiuni */
+  gap: 2rem;
   margin-bottom: 2rem;
 }
 
 .footerSection {
-  flex: 1; /* Distribuie spațiul */
-  min-width: 200px; /* Lățime minimă înainte de a trece pe rândul următor */
+  flex: 1;
+  min-width: 200px;
+}
+
+.footerSectionLogo {
+  padding-top: 1.6rem;
 }
 
 .footerTitle {
-  /* Titlul principal din footer (numele site-ului) */
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.75rem;
@@ -34,11 +34,10 @@
 }
 
 .footerSubtitle {
-  /* Titlurile secțiunilor (Linkuri Utile, Conectează-te) */
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--color-gray-200, #e9ecef); /* O culoare puțin mai subtilă */
+  color: var(--color-gray-200, #e9ecef);
   border-bottom: 1px solid var(--color-gray-600, #6c757d);
   padding-bottom: 0.5rem;
 }
