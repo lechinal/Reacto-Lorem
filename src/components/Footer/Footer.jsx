@@ -103,7 +103,7 @@ function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>© {currentYear} Test de Joaca. Toate drepturile rezervate.</p>
+          <p>© {currentYear} Reacto Lorem. Toate drepturile rezervate.</p>
           <div className={styles.creatorBadgeContainer}>
             {" "}
             <GitHubBadge username="lechinal" initialText="Creat de" />
