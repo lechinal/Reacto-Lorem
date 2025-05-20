@@ -11,10 +11,7 @@ function About() {
       <h1 className={styles.pageTitle}>Despre Noi</h1>
       <MissionVisionSection />
       <TeamSection />
-      <TestimonialsSlider
-        sectionTitle="Părerile partenerilor noștri"
-        // testimonials={aboutPageTestimonials} // Dacă ai date specifice
-      />
+      <TestimonialsSlider sectionTitle="Părerile partenerilor noștri" />
     </div>
   );
 }
