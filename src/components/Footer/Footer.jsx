@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
+import { BiLogoTiktok } from "react-icons/bi";
 
 import GitHubBadge from "../GitHubBadge/GitHubBadge";
 import Logo from "../Logo/Logo";
@@ -97,6 +98,15 @@ function Footer() {
                 className={`${styles.socialLink} ${styles.youtube}`}
               >
                 <FaYoutube />
+              </a>
+              <a
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className={`${styles.socialLink} ${styles.tiktok}`}
+              >
+                <BiLogoTiktok />
               </a>
             </div>
           </div>

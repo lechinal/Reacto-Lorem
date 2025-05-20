@@ -80,7 +80,7 @@
   font-size: 1.5rem;
   text-decoration: none;
   opacity: 0.8;
-  transition: color 0.2s ease, opacity 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 
   display: inline-block;
   margin: 0 0.5rem;
@@ -96,30 +96,39 @@
 .socialLink.facebook:hover {
   color: #1877f2;
   transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .socialLink.x:hover {
   color: #1da1f2;
   transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .socialLink.instagram:hover {
   color: #c13584;
+  transform: scale(1.1);
 }
 
 .socialLink.linkedin:hover {
-  color: #0a66c2; /* LinkedIn Blue */
-  /* Poți încerca și: color: #0077B5; */
+  color: #0a66c2;
+  /* P color: #0077B5; */
+  transform: scale(1.1);
 }
 
 .socialLink.youtube:hover {
-  color: #ff0000; /* YouTube Red */
+  color: #ff0000;
+  transform: scale(1.1);
 }
 
+.socialLink.tiktok:hover {
+  color: #fe2c55; /* Culoarea recomandată pentru TikTok */
+  transform: scale(1.1);
+}
 .footerBottom {
   text-align: center;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--color-gray-600, #6c757d); /* Linie de separare */
+  border-top: 1px solid var(--color-gray-600, #6c757d);
   font-size: 0.85rem;
   opacity: 0.7;
 }
