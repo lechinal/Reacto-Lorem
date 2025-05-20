@@ -13,7 +13,7 @@ function FaqItem({ id, question, answer }) {
   const uniqueId = `faq-answer-${id}`;
 
   return (
-    <div className={styles.faqItem}>
+    <div className={`${styles.faqItem} ${isOpen ? styles.itemOpen : ""}`}>
       <button
         className={styles.faqQuestion}
         onClick={toggleOpen}
@@ -23,18 +23,18 @@ function FaqItem({ id, question, answer }) {
         {question}
         <span className={`${styles.faqIcon} ${isOpen ? styles.isOpen : ""}`}>
           {isOpen ? "X" : "+"}{" "}
-          {/* Folosind minus în loc de x pentru o deschidere mai clară */}
         </span>
       </button>
-      {/* Condiționare mai robustă pentru afișarea răspunsului */}
+
       <div
         id={uniqueId} // Folosim ID-ul unic
         className={`${styles.faqAnswerWrapper} ${isOpen ? styles.open : ""}`}
         role="region"
         hidden={!isOpen} // Adaugă hidden pentru accesibilitate când e închis
       >
-        {isOpen && <p className={styles.faqAnswerContent}>{answer}</p>}{" "}
+        {/* {isOpen && <p className={styles.faqAnswerContent}>{answer}</p>}{" "} */}
         {/* Randează paragraful doar când e deschis */}
+        <p className={styles.faqAnswerContent}>{answer}</p>
       </div>
     </div>
   );

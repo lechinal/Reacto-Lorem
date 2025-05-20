@@ -3,6 +3,10 @@
   margin-bottom: 1rem;
 }
 
+.faqItem.itemOpen {
+  border-bottom-color: var(--github-badge-username-color);
+}
+
 .faqItem:last-child {
   border-bottom: none;
   margin-bottom: 0;
@@ -62,19 +66,17 @@
 }
 
 .faqAnswerWrapper.open {
-  max-height: 500px; /* O valoare suficient de mare pentru a cuprinde conținutul */
+  max-height: 500px;
   opacity: 1;
 }
 
 .faqAnswerContent {
-  /* Stilurile pentru paragraful propriu-zis */
   padding: 0.5rem 0.5rem 1.5rem 0.5rem;
   color: var(--text-color-muted, #6c757d);
   line-height: 1.7;
 }
 
 .faqAnswerContent p {
-  /* Dacă mai ai <p> în interiorul .faqAnswerContent */
   margin: 0;
 }
 
