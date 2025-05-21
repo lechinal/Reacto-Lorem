@@ -1,7 +1,7 @@
 .faqPage {
   padding-top: 2rem;
   padding-bottom: 3rem;
-  animation: fadeIn 0.5s ease-in-out; /* Presupunând că ai fadeIn definit global */
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 .pageTitle {

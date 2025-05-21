@@ -6,9 +6,9 @@ function CallToActionBanner({
   title,
   subtitle,
   buttonText,
-  buttonLink, // Poate fi un link intern (ex: "/contact") sau extern
-  backgroundImageUrl, // Opțional, pentru un fundal personalizat
-  backgroundColor, // Opțional, pentru un fundal de culoare solidă
+  buttonLink,
+  backgroundImageUrl,
+  backgroundColor,
 }) {
   const bannerStyle = {};
   if (backgroundImageUrl) {

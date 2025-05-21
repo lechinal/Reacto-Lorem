@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./FAQ.module.css";
 import FaqItem from "../FAQ/components/FaqItem.jsx";
+import CallToActionBanner from "../../components/CallToActionBanner/CallToActionBanner.jsx";
 
 // Date exemplu pentru FAQ
 const faqData = [
@@ -68,6 +69,14 @@ function FAQ() {
           />
         ))}
       </div>
+      <CallToActionBanner
+        title="Nu ai găsit ce căutai?"
+        subtitle="Suntem aici pentru tine! Nu ezita să ne contactezi pentru orice nelămurire sau informație suplimentară."
+        buttonText="Trimite-ne un Mesaj"
+        buttonLink="/contact"
+        // backgroundImageUrl="https://picsum.photos/seed/ctabackground7/1200/400"
+        backgroundImageUrl="https://picsum.photos/seed/faqhelp3/1200/400"
+      />
     </div>
   );
 }

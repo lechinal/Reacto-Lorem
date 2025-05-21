@@ -52,7 +52,7 @@
 .faqIcon.isOpen {
   transform: rotate(45deg);
   /* Pentru '+' transformat în 'x' */
-  color: red;
+  color: var(--github-badge-username-color);
 }
 .faqIcon.isOpen:hover {
   transform: rotate(-35deg);
