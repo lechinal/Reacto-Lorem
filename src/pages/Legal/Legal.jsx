@@ -71,7 +71,6 @@ function Legal() {
         subtitle="Ne dedicăm să oferim o experiență sigură și transparentă. Vă mulțumim pentru timpul acordat parcurgerii informațiilor noastre legale."
         buttonText="Înapoi la Pagina Principală"
         buttonLink="/"
-        // Poți omite backgroundImageUrl pentru un look mai curat pe pagina legală
         backgroundImageUrl="https://picsum.photos/seed/legalsimple3/1200/300"
       />
     </>
