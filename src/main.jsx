@@ -45,7 +45,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: "/Reacto-Lorem/",
+    basename: import.meta.env.VITE_PUBLIC_URL || "/",
   }
 );
 
