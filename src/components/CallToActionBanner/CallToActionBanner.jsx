@@ -17,7 +17,7 @@ function CallToActionBanner({
     bannerStyle.backgroundColor = backgroundColor;
   }
 
-  // Verifică dacă link-ul este extern sau intern
+  // Verifica daca link-ul este extern sau intern
   const isExternalLink =
     buttonLink &&
     (buttonLink.startsWith("http://") || buttonLink.startsWith("https://"));
