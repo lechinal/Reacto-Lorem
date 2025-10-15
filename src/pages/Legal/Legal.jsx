@@ -26,7 +26,7 @@ function Legal() {
             mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
             Vestibulum lacinia arcu eget nulla.
           </p>
-          {/* Adaugă mai mult text placeholder sau conținut real */}
+         
         </section>
         <section className={styles.legalSection}>
           <h2 className={styles.sectionTitle}>Politică de Confidențialitate</h2>
@@ -46,7 +46,7 @@ function Legal() {
             Phasellus vitae nulla. Nam bibendum. Nunc tincidunt. Aliquam erat
             volutpat.
           </p>
-          {/* Adaugă mai mult text placeholder sau conținut real */}
+          
         </section>
         <section className={styles.legalSection}>
           <h2 className={styles.sectionTitle}>Politică Cookies</h2>
@@ -63,7 +63,7 @@ function Legal() {
             scelerisque luctus velit. Etiam dictum tincidunt diam. Ut tempus
             purus at lorem.
           </p>
-          {/* Adaugă mai mult text placeholder sau conținut real */}
+        
         </section>
       </div>
       <CallToActionBanner
