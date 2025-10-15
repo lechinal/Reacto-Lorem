@@ -34,7 +34,7 @@
   color: var(--primary-color, #007bff);
   margin-top: 0;
   margin-bottom: 1.5rem;
-  border-bottom: 2px solid var(--primary-color-light, #79bbff); /* O linie subtilă sub titlu */
+  border-bottom: 2px solid var(--primary-color-light, #79bbff); 
   padding-bottom: 0.5rem;
 }
 
