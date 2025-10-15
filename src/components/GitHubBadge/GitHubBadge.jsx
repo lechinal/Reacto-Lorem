@@ -1,14 +1,14 @@
 import React from "react";
-import { FaGithub } from "react-icons/fa"; // Sau altă iconiță GitHub dacă preferi
+import { FaGithub } from "react-icons/fa"; 
 import styles from "./GitHubBadge.module.css";
 
 /**
  * Props pentru GitHubBadge:
- * @param {string} username - Username-ul tău GitHub (obligatoriu).
- * @param {string} [initialText="Creat de"] - Textul afișat inițial lângă iconiță.
- * @param {string} [hoverTextPrefix=""] - Un prefix adăugat înaintea username-ului la hover (ex: "Vezi ").
- * @param {string} [ariaLabel] - Etichetă ARIA pentru accesibilitate.
- * @param {string} [className] - Clase CSS suplimentare pentru a suprascrie/adăuga stiluri.
+ * @param {string} username - Username-ul  GitHub (obligatoriu).
+ * @param {string} [initialText="Creat de"] - Textul afisat initial langa iconita.
+ * @param {string} [hoverTextPrefix=""] - Un prefix adaugat inaintea username-ului la hover (ex: "Vezi ").
+ * @param {string} [ariaLabel] - Eticheta ARIA pentru accesibilitate.
+ * @param {string} [className] - Clase CSS suplimentare pentru a suprascrie/adauga stiluri.
  */
 function GitHubBadge({
   username,
