@@ -11,7 +11,7 @@ const PageContentLoadingFallback = () => (
       flexDirection: "column",
       justifyContent: "center",
       alignItems: "center",
-      minHeight: "calc(100vh - 120px)", // Ajustează la nevoie (ex: înălțimea header + footer)
+      minHeight: "calc(100vh - 120px)", // Ajusteaz la nevoie (ex: înalțimea header + footer)
     }}
   >
     <RingLoader color="#007bff" loading={true} size={60} />
