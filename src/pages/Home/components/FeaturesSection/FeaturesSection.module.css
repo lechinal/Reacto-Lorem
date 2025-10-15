@@ -25,9 +25,9 @@
 
 .featureCard img {
   width: 100%;
-  height: 180px; /* Fixed height for consistency */
+  height: 180px; 
   object-fit: cover;
-  border-radius: calc(var(--border-radius) - 5px); /* Slightly smaller radius */
+  border-radius: calc(var(--border-radius) - 5px); 
   margin-bottom: 1rem;
 }
 
