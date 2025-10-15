@@ -1,17 +1,16 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-// Importă CSS-ul Leaflet aici dacă nu este deja importat global o singură dată
-// Dacă este importat global (ex: în main.jsx), poți comenta/șterge linia de mai jos
-import "leaflet/dist/leaflet.css";
-import L from "leaflet"; // Importă obiectul Leaflet principal
 
-// Resetarea iconiței default a Leaflet pentru a funcționa corect cu module și bundlere
-// Se execută o singură dată la încărcarea modulului
+import "leaflet/dist/leaflet.css";
+import L from "leaflet"; 
+
+// Resetarea iconitei default a Leaflet pentru a functiona corect cu module si bundlere
+// Se execută o singura data la incarcarea modulului
 if (typeof window !== "undefined") {
   delete L.Icon.Default.prototype._getIconUrl;
 
   L.Icon.Default.mergeOptions({
-    // Folosește căi absolute din folderul public
+   
     iconRetinaUrl: "/leaflet-images/marker-icon-2x.png",
     iconUrl: "/leaflet-images/marker-icon.png",
     shadowUrl: "/leaflet-images/marker-shadow.png",
@@ -23,23 +22,23 @@ function InteractiveMap({
   zoom = 15,
   popupText,
   scrollWheelZoom = false,
-  mapClassName = "", // Adăugăm o valoare default pentru a evita erori dacă nu e pasată
-  style, // Permite pasarea unui obiect de stil inline dacă e necesar
+  mapClassName = "", 
+  style, 
 }) {
-  // Placeholder pentru SSR/build sau dacă window nu e definit încă
+  // Placeholder pentru SSR/build sau daca window nu e definit înca
   if (typeof window === "undefined") {
     return (
       <div
         className={mapClassName}
         style={{
-          height: "300px", // O înălțime default pentru placeholder
+          height: "300px", 
           background: "#e9ecef",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           color: "#6c757d",
-          borderRadius: "var(--border-radius)", // Folosim variabilele CSS dacă sunt definite
-          ...style, // Permite suprascrierea stilului
+          borderRadius: "var(--border-radius)", 
+          ...style, 
         }}
       >
         Loading map...
@@ -84,8 +83,8 @@ function InteractiveMap({
       center={position}
       zoom={zoom}
       scrollWheelZoom={scrollWheelZoom}
-      className={mapClassName} // Clasa pentru stilizarea containerului hărții
-      style={style} // Stiluri inline pentru containerul hărții
+      className={mapClassName} 
+      style={style} 
     >
       <TileLayer
         attribution='© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
