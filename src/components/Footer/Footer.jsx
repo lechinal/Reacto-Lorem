@@ -47,7 +47,7 @@ function Footer() {
               <li>
                 <Link to="/legal">Informații Legale</Link>
               </li>
-              {/* Adaugă alte linkuri relevante */}
+            
             </ul>
           </div>
 
