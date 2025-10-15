@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./TeamSection.module.css";
 import TeamMemberCard from "./TeamMemberCard";
 
-// Datele pentru echipă pot veni dintr-un array, API, etc.
+// Datele pentru echipa pot veni dintr-un array, API, etc.
 const teamMembersData = [
   {
     id: 1,
