@@ -2,11 +2,11 @@
   background-color: var(--color-dark, #343a40);
   color: var(--text-color-on-dark, #f8f9fa);
   padding: 3rem 0 1.5rem 0; /* Spațiere sus/jos */
-  margin-top: auto; /* Important pentru sticky footer, dacă #root are display:flex și min-height:100vh */
+  margin-top: auto; 
 }
 
 .footerContainer {
-  /* Clasa container globală ar trebui să gestioneze lățimea și centrarea */
+  
 }
 
 .footerContent {
@@ -138,16 +138,16 @@
 
 @media (max-width: 768px) {
   .footerContent {
-    flex-direction: column; /* Stivuiește secțiunile pe mobil */
-    align-items: center; /* Centrează conținutul când e stivuit */
+    flex-direction: column; 
+    align-items: center; 
     text-align: center;
   }
   .footerSection {
-    min-width: auto; /* Permite lățime completă când e stivuit */
+    min-width: auto;
     margin-bottom: 1.5rem;
   }
   .socialIcons {
-    justify-content: center; /* Centrează iconițele sociale */
+    justify-content: center; 
   }
   .footerSubtitle {
     text-align: center;
