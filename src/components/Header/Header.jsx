@@ -17,12 +17,12 @@ function Header() {
     setIsMobileMenuOpen(false);
   };
 
-  // Închide meniul mobil la schimbarea rutei
+  // Inchide meniul mobil la schimbarea rutei
   useEffect(() => {
     closeMobileMenu();
   }, [location]);
 
-  // Optional: Închide meniul dacă se redimensionează la desktop
+  // Optional: Inchide meniul dacă se redimensionează la desktop
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768 && isMobileMenuOpen) {
@@ -39,10 +39,10 @@ function Header() {
         <NavLink
           to="/"
           className={styles.titleLink}
-          onClick={closeMobileMenu} // Asigură-te că închide meniul și la click pe titlu
+          onClick={closeMobileMenu} 
         >
           <Logo className={styles.logoSvg} aria-label="Reacto Lorem Logo" />
-          {/* <h1 className={styles.title}>Reacto Lorem</h1> */}
+          
         </NavLink>
 
         <button
