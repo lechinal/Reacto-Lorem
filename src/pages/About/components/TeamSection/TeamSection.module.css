@@ -1,13 +1,8 @@
 .teamSection {
-  padding: 2rem 0; /* Poate rămâne aici sau gestionat de About.jsx */
+  padding: 2rem 0; 
 }
 
-/* Clasa .sectionTitle este generală și a fost deja definită în About.module.css.
-   Dacă vrei ca TeamSection să aibă propriul său stil de titlu,
-   definește-l aici (ex: .teamSectionTitle) și folosește-l în TeamSection.jsx.
-   Pentru acest exemplu, vom presupune că se reutilizează .sectionTitle din About.module.css
-   sau se trece ca prop. Alternativ, o putem copia aici.
-*/
+
 .sectionTitle {
   text-align: center;
   font-size: 2rem;
