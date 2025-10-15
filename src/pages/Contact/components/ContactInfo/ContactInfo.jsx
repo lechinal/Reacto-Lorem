@@ -20,13 +20,13 @@ function ContactInfo() {
 
       <div className={styles.mapOuterContainer}>
         {" "}
-        {/* Un container exterior pentru mapă, dacă e nevoie de spațiere suplimentară */}
+        {/* Un container exterior pentru map, daca e nevoie de spatiere suplimentara */}
         <InteractiveMap
           position={mapPosition}
           zoom={15}
           popupText={mapPopupText}
-          mapClassName={styles.leafletMap} // Clasa pentru stilizarea dimensiunilor hărții
-          // style={{ height: '350px', width: '100%' }} // Alternativ, poți pasa stiluri inline
+          mapClassName={styles.leafletMap} 
+         
         />
       </div>
     </div>
