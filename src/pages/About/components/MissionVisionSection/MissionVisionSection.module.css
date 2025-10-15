@@ -34,7 +34,7 @@
 @media (max-width: 768px) {
   .contentSection {
     flex-direction: column;
-    align-items: center; /* Center image when stacked */
+    align-items: center; 
   }
   .aboutImage {
     flex-basis: auto;
