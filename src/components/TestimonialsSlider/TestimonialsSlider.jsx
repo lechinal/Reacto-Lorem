@@ -1,7 +1,7 @@
 import styles from "./TestimonialsSlider.module.css";
 import React, { useState, useEffect } from "react";
 
-// Poți adăuga iconițe pentru butoane
+
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 // Date exemplu pentru testimoniale
@@ -57,7 +57,7 @@ function TestimonialsSlider({
     setCurrentIndex(newIndex);
   };
 
-  // Auto-play (opțional)
+  // Auto-play 
   useEffect(() => {
     if (testimonials.length > 1) {
       const timer = setTimeout(() => {
@@ -68,7 +68,7 @@ function TestimonialsSlider({
   }, [currentIndex, testimonials.length, goToNext]);
 
   if (!testimonials || testimonials.length === 0) {
-    return null; // Nu afișa nimic dacă nu există testimoniale
+    return null; // Nu afisa nimic dacă nu exista testimoniale
   }
 
   const currentTestimonial = testimonials[currentIndex];
