@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./FaqItem.module.css";
 
 function FaqItem({ id, question, answer }) {
-  // Am adăugat 'id' aici pentru aria-controls
+ 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
@@ -30,10 +30,10 @@ function FaqItem({ id, question, answer }) {
         id={uniqueId} // Folosim ID-ul unic
         className={`${styles.faqAnswerWrapper} ${isOpen ? styles.open : ""}`}
         role="region"
-        hidden={!isOpen} // Adaugă hidden pentru accesibilitate când e închis
+        hidden={!isOpen} 
       >
         {/* {isOpen && <p className={styles.faqAnswerContent}>{answer}</p>}{" "} */}
-        {/* Randează paragraful doar când e deschis */}
+        {/* Randeaza paragraful doar cand e deschis */}
         <p className={styles.faqAnswerContent}>{answer}</p>
       </div>
     </div>
