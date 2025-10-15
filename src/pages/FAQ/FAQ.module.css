@@ -16,7 +16,7 @@
   margin: 0 auto;
 }
 
-/* Responsive adjustments pentru pagina FAQ în ansamblu */
+/* Responsive adjustments pentru pagina FAQ in ansamblu */
 @media (max-width: 768px) {
   .pageTitle {
     font-size: 2rem;
