@@ -1,4 +1,4 @@
-/* NotFound.module.css */
+
 .notFoundPage {
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   justify-content: center;
   text-align: center;
   padding: 3rem 1rem;
-  min-height: 60vh; /* Asigura ca ocupa spatiu chiar si pe ecrane mici */
+  min-height: 60vh; 
   animation: fadeIn 0.5s ease-in-out;
 }
 
