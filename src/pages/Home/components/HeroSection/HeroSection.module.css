@@ -7,7 +7,7 @@
   align-items: center;
   gap: 2rem;
   box-shadow: var(--box-shadow);
-  overflow: hidden; /* To ensure image corners are rounded if it's part of the card */
+  overflow: hidden; 
 }
 
 .heroContent {
@@ -48,6 +48,7 @@
   background-color: #0056b3;
   text-decoration: none;
 }
+
 /* Responsive adjustments for hero section */
 @media (max-width: 768px) {
   .hero {
